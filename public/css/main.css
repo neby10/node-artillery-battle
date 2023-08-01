@@ -1,0 +1,73 @@
+:root {
+    --primary-light: #fff;
+    --secondary-light: #dee4e7;
+    --primary-dark: #37474f;
+    --secondary-dark: #222;
+    --blue: #3d68e9;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+
+}
+
+nav {
+
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+
+}
+
+.center {
+    text-align: center;
+}
+
+.game-modes {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: auto;
+    width: 30%;
+    min-width: 350px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.game-modes-option {
+    font-size: 1.6rem;
+    margin: 0 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    background-color: var(--blue);
+    color: var(--primary-light);
+}
+
+.game-modes-option:hover, .game-modes-option a:hover {
+    color: red;
+}
+
+.game-modes-option a, .game-modes-option a:visited {
+    text-decoration: none;
+    color: var(--primary-light);
+}
+
+
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}

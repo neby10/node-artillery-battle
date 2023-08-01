@@ -8,9 +8,27 @@ const app = express()
 app.use(express.static('public'))
 app.set('view engine', 'ejs')
 
-app.listen(3000, () => {
-    console.log("App listening on port 3000");
+// initialize socket.io
+const http = require('http')
+const server = http.createServer(app)
+const io = require('socket.io')(server)
+
+const PORT = 3000
+
+server.listen(PORT, () => {
+    console.log("App listening on port " + PORT);
 });
+
+// handle socket connections
+io.on('connection', (socket) => {
+    // handle connect
+    console.log("a user connected")
+
+    socket.on('disconnect', () => {
+        // handle disconnect
+        console.log("a user disconnected")
+    })
+})
 
 app.get('/', (req, res) => {
     res.render('home')

@@ -3,7 +3,15 @@
     <%- include('layouts/header'); -%>
     <body>
         <%- include('layouts/navbar'); -%>
-        <h1>Home</h1>
+        <div class="home">
+            <h1 class="center">Home</h1>
+            <p class="center">Welcome to Artillery Battle! Click One-Player or Two-Player to begin!</p>
+            <p class="center">Choose a mode...</p>
+            <div class="game-modes">
+                <li class="game-modes-option"><a href="/one-player">One Player</a></li>
+                <li class="game-modes-option"><a href="/two-player">Two Player</a></li>
+            </div>
+        </div>
         
         <%- include('layouts/footer'); -%>
         <%- include('layouts/scripts'); -%>
