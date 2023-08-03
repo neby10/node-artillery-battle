@@ -11,7 +11,19 @@ html {
 }
 
 body {
+    margin: 0;
+    padding: 0;
+     /* ALONG WITH .main AND .footer THIS MAKES THE PAGE FILL UP THE ENTIRE HEIGHT */
+     min-height: 100vh;
+     display: flex;
+     flex-direction: column;
+}
 
+.main {
+    flex: 1; /* HELPS FILL ENTIRE HEIGHT */
+}
+.footer {
+    flex-shrink: 0; /* HELPS FILL ENTIRE HEIGHT */
 }
 
 nav {
@@ -34,18 +46,22 @@ nav li {
     text-align: center;
 }
 
-.game-modes {
+.hidden {
+    display: none;
+}
+
+.game-buttons {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     list-style-type: none;
     margin: auto;
-    width: 30%;
+    width: 40%;
     min-width: 350px;
     align-items: center;
     justify-content: space-evenly;
 }
 
-.game-modes-option {
+.game-button {
     font-size: 1.6rem;
     margin: 0 10px;
     border: 1px solid black;
@@ -54,15 +70,23 @@ nav li {
     text-decoration: none;
     background-color: var(--blue);
     color: var(--primary-light);
+    max-width: 200px;
+    width: auto;
+    text-align: center;
+    margin: auto;
+    /* min-width: 150px; */
 }
 
-.game-modes-option:hover, .game-modes-option a:hover {
+.game-button:hover {
     color: red;
+    cursor: pointer;
 }
 
-.game-modes-option a, .game-modes-option a:visited {
-    text-decoration: none;
-    color: var(--primary-light);
+#canvas {
+    width: 600px;
+    height: 400px;
+    background-color: black;
+    margin: auto;
 }
 
 

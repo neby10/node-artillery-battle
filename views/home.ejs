@@ -3,17 +3,25 @@
     <%- include('layouts/header'); -%>
     <body>
         <%- include('layouts/navbar'); -%>
-        <div class="home">
-            <h1 class="center">Home</h1>
-            <p class="center">Welcome to Artillery Battle! Click One-Player or Two-Player to begin!</p>
-            <p class="center">Choose a mode...</p>
-            <div class="game-modes">
-                <li class="game-modes-option"><a href="/one-player">One Player</a></li>
-                <li class="game-modes-option"><a href="/two-player">Two Player</a></li>
+        <div class="main home">
+            <h1 class="center">Welcome to Artillery Battle!</h1>
+            <div id="lobbyScreen">
+                <div class="game-buttons">
+                    <button id="createGameButton" class="game-button">Create Game</button>
+                    <label for="gameCode">Enter code:</label>
+                    <input id="gameCode" name="gameCode" type="text">
+                    <button id="joinGameButton" class="game-button">Join Game</button>
+                </div>
+            </div>
+            <div id="gameScreen" class="center hidden">
+                <p>Game Code: <span id="gameCodeDisplay"></span></p>
+                <canvas id="canvas"></canvas>
             </div>
         </div>
         
         <%- include('layouts/footer'); -%>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="js/app.js"></script>
         <%- include('layouts/scripts'); -%>
     </body>
 </html>
